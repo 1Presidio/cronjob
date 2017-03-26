@@ -1,12 +1,4 @@
 #!/bin/bash
-#url=$1
-
-#echo $1 | grep -o "https://www.*.*" > /dev/null
-
-#if [ $? -gt 0 ]; then
-#    echo "Bad Url"
-#    exit 0
-#fi
 
 if [ ! -f  info.txt ];
 	then touch ~/info.txt
@@ -15,11 +7,6 @@ fi
 touch tmp.txt
 
 curl -s "$url" 2> /dev/null > tmp.txt
-
-
-#grep -o '<title>.*</title>' tmp.txt  >> info.txt
-#grep -o '\<!doctype.*\> '   tmp.txt  >> info.txt
-
 
 echo "Current Login Name" >> info.txt
 logname         >> info.txt
